@@ -1,7 +1,7 @@
-FROM python:2.7.16-slim
+FROM python:2.7-buster
 MAINTAINER Kevin Lin <developer@kevinlin.info>
 
-RUN apt-get update && apt-get install -y wget unzip python-dev libmariadb-dev-compat gcc build-essential && pip install gunicorn
+RUN pip install gunicorn
 COPY . /
 RUN pip install -r requirements.txt 
 
