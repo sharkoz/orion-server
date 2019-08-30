@@ -2,7 +2,8 @@ FROM python:2.7.16-slim
 MAINTAINER Kevin Lin <developer@kevinlin.info>
 
 RUN apt-get update && apt-get install -y wget unzip python-dev default-libmysqlclient-dev gcc build-essential && pip install gunicorn
-RUN pwd && ls && pip install -r requirements.txt 
+COPY . /
+RUN pip install -r requirements.txt 
 
 ENV DATABASE_HOST db
 ENV DATABASE_PORT 3306
