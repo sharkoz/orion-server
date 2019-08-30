@@ -1,4 +1,4 @@
-FROM python:2.7-buster
+FROM python:2.7-stretch
 MAINTAINER Kevin Lin <developer@kevinlin.info>
 
 RUN pip install gunicorn
