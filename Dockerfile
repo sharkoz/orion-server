@@ -1,7 +1,7 @@
 FROM python:2.7.16-slim
 MAINTAINER Kevin Lin <developer@kevinlin.info>
 
-RUN apt-get update && apt-get install -y wget unzip python-dev default-libmysqlclient-dev gcc build-essential && pip install gunicorn
+RUN apt-get update && apt-get install -y wget unzip python-dev libmysqlclient-dev gcc build-essential && pip install gunicorn
 COPY . /
 RUN pip install -r requirements.txt 
 
